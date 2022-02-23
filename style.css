@@ -9,10 +9,9 @@
 body {
   font-family: "Barlow", sans-serif;
 }
-
 .hero {
-  height: 80vh;
-  background: url(images/image-header.jpg) no-repeat;
+  height: 100vh;
+  background: url(images/image-header-d.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -24,15 +23,42 @@ nav {
   padding: 20px;
 }
 
-ul {
+/* .scrolling-active {
+  background-color: black;
+  transition: 0.5s ease-in;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} */
+
+.burger {
   display: none;
 }
 
-li,
-a {
+.nav-items ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 8px;
+  list-style: none;
+  font-size: 15px;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.nav-items li,
+a {
+  display: flex;
+  padding: 0 8px;
+  list-style: none;
+  font-size: 15px;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.nav-items li,
+a {
+  display: flex;
   padding: 0 8px;
   list-style: none;
   font-size: 15px;
@@ -60,7 +86,7 @@ a {
   transform: translate(-50%, -50%);
   color: hsl(0, 0%, 100%);
   text-transform: uppercase;
-  font-size: 33px;
+  font-size: 45px;
   font-weight: 900;
   letter-spacing: 5px;
 }
@@ -72,19 +98,26 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.gallery1 {
+.hero-imgm {
+  display: none;
+}
+.imgm {
+  display: none;
+}
+
+.gallery1,
+.gallery2 {
   display: flex;
-  flex-direction: column-reverse;
 }
 
-.gallery1 img {
-  width: 100%;
-  height: 45vh;
-}
-
+.gallery1 img,
 .gallery2 img {
   width: 100%;
-  height: 45vh;
+}
+
+.text,
+.img {
+  flex: 1;
 }
 
 .gallery1 .text {
@@ -93,13 +126,20 @@ a {
   justify-content: center;
 }
 
+.gallery2 .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-content {
-  padding: 35px 15px;
-  text-align: center;
+  width: 70%;
 }
 
 .text-content h1 {
+  width: 60%;
   font-family: "Fraunces", serif;
+  line-height: 1.3;
   font-size: 30px;
   font-weight: 900;
 }
@@ -108,8 +148,9 @@ a {
   color: hsl(213, 9%, 39%);
   font-weight: 700;
   margin-top: 20px;
-  line-height: 20px;
+  line-height: 1.5;
 }
+
 .text-content button {
   font-family: "Fraunces", serif;
   margin-top: 25px;
@@ -119,50 +160,67 @@ a {
   font-weight: 900;
 }
 
-.cherry {
-  text-align: center;
-  color: hsl(167, 40%, 24%);
+.img2m,
+.img3m {
+  display: none;
+}
+
+.gallery3 {
   width: 100%;
-  height: 90vh;
-  background: url(images/image-graphic-design.jpg) no-repeat;
-  background-size: cover;
-  padding: 300px 20px 5px 20px;
+  display: flex;
 }
 
-.cherry p,
-.orange p {
-  font-size: 15px;
-  padding-top: 12px;
+.gallery-box {
+  position: relative;
+  top: -4px;
 }
 
-.orange {
-  text-align: center;
-  color: hsl(198, 62%, 26%);
+.gallery-box img {
   width: 100%;
-  height: 90vh;
-  background: url(images/image-photography.jpg) no-repeat;
-  background-size: cover;
-  padding: 300px 20px 5px 20px;
+  height: 100%;
 }
 
-.gallery3 h1 {
+.img-text {
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  right: 160px;
+}
+
+.img-text h2 {
   font-family: "Fraunces", serif;
-  padding-bottom: 25px;
+  font-weight: 900;
+  padding-bottom: 20px;
 }
 
-.gallery3 p {
-  line-height: 20px;
+.img-text p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.left {
+  color: hsl(167, 40%, 24%);
+}
+
+.right {
+  color: hsl(198, 62%, 26%);
 }
 
 .testimonial {
   text-align: center;
-  padding: 40px 10px;
+  padding: 80px;
+}
+
+.t-content {
+  display: flex;
 }
 
 .head {
   font-family: "Fraunces", serif;
   text-transform: uppercase;
-  color: hsl(213, 9%, 39%);
+  color: hsl(232, 10%, 55%);
   font-size: 12px;
   letter-spacing: 2px;
 }
@@ -195,9 +253,10 @@ a {
 }
 
 .img-grid {
+  position: relative;
+  top: 3px;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;
 }
 
 .img-grid img {
@@ -205,8 +264,6 @@ a {
 }
 
 .footer {
-  position: relative;
-  top: -3px;
   background-color: hsl(168, 34%, 41%);
   display: flex;
   flex-direction: column;
@@ -219,7 +276,12 @@ a {
   color: hsl(167, 40%, 24%);
 }
 
+.links ul {
+  display: flex;
+}
+
 .links li {
+  list-style: none;
   padding: 40px 30px 0 30px;
   color: hsl(167, 40%, 24%);
 }
@@ -229,51 +291,60 @@ a {
   color: hsl(167, 40%, 24%);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .hero {
-    height: 100vh;
-    background: url(images/image-header-d.jpg) no-repeat;
+    height: 90vh;
+    background: url(images/image-header.jpg) no-repeat;
     background-size: cover;
     background-position: center;
   }
   .burger {
-    display: none;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 18px;
   }
 
   nav {
-    display: flex;
-    justify-content: space-between;
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+  .nav-items {
+    display: none;
+    position: relative;
+    left: 2px;
+    justify-content: center;
     align-content: center;
-    padding: 20px;
+    width: 100%;
+    height: 55vh;
+    background-color: white;
+    text-align: center;
+    z-index: 5;
   }
-
-  ul {
+  .nav-items ul {
     display: flex;
+    flex-direction: column;
+    padding: 0;
   }
-
-  li,
+  .nav-items li,
   a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 8px;
-    list-style: none;
+    color: hsl(232, 10%, 55%);
+    padding: 12px;
     font-size: 15px;
-    text-decoration: none;
-    color: hsl(0, 0%, 100%);
   }
-
-  .hero button {
-    font-family: "Fraunces", serif;
-    font-size: 12px;
-    border: none;
-    background-color: hsl(0, 0%, 100%);
-    padding: 8px 15px;
-    border-radius: 15px;
+  .nav-items button {
+    background-color: hsl(51, 100%, 49%);
+    padding: 15px 30px;
+    border-radius: 30px;
     font-weight: 700;
-    text-transform: uppercase;
+    font-size: 15px;
   }
-
+  .nav-items.active {
+    display: flex;
+  }
   .heading {
     font-family: "Fraunces", serif;
     position: absolute;
@@ -282,7 +353,7 @@ a {
     transform: translate(-50%, -50%);
     color: hsl(0, 0%, 100%);
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 900;
     letter-spacing: 5px;
   }
@@ -293,161 +364,82 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
-  .gallery {
-    display: flex;
-    height: 70vh;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: 70vh;
-  }
-
-  .mob-img {
+  .imgd {
     display: none;
   }
-
-  .gallery .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .gallery .text-content {
-    width: 70%;
-  }
-
-  .text-content h1 {
-    font-family: "Fraunces", serif;
-    font-size: 30px;
-    font-weight: 900;
-  }
-
-  .text-content p {
-    color: hsl(213, 9%, 39%);
-    font-weight: 700;
-    margin-top: 20px;
-    line-height: 20px;
-  }
-  .text-content button {
-    font-family: "Fraunces", serif;
-    margin-top: 25px;
-    border: none;
-    text-transform: uppercase;
-    background-color: white;
-    font-weight: 900;
-  }
-
-  .text,
-  .img {
-    flex: 1;
-  }
-
-  .gallery2 {
-    width: 100%;
+  .imgm {
     display: flex;
   }
-
-  .cherry {
-    color: hsl(167, 40%, 24%);
-    width: 100%;
-    height: 80vh;
-    background: url(images/image-graphic-design-d.jpg);
-    padding: 350px 130px 5px 130px;
-  }
-
-  .gallery2 h1 {
-    font-family: "Fraunces", serif;
-    padding-bottom: 25px;
-  }
-
-  .gallery2 p {
-    line-height: 20px;
-  }
-
-  .orange {
-    color: hsl(198, 62%, 26%);
-    width: 100%;
-    height: 80vh;
-    background: url(images/image-photography-d.jpg);
-    padding: 350px 130px 5px 130px;
-  }
-
-  .testimonial {
+  .gallery1 {
     text-align: center;
-    margin: 70px;
-  }
-
-  .head {
-    font-family: "Fraunces", serif;
-    text-transform: uppercase;
-    color: hsl(213, 9%, 39%);
-    font-size: 15px;
-  }
-
-  .t-content {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding-top: 40px;
-  }
-
-  .sub-content {
-    padding: 15px;
-  }
-
-  .sub-content img {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-  }
-
-  .sub-content p {
-    color: hsl(213, 9%, 39%);
-    padding-top: 40px;
-    line-height: 22px;
-  }
-
-  .sub-content h4 {
-    font-family: "Fraunces", serif;
-    padding-top: 40px;
-  }
-
-  .sub-content h5 {
-    padding-top: 10px;
-    color: hsl(232, 10%, 55%);
-  }
-
-  .img-grid {
     display: flex;
+    flex-direction: column-reverse;
   }
+  .gallery2 {
+    text-align: center;
 
-  .img-grid img {
-    width: 100%;
-  }
-
-  .footer {
-    position: relative;
-    top: -3px;
-    background-color: hsl(168, 34%, 41%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
-
-  .f-head img {
-    padding-top: 45px;
-    color: hsl(167, 40%, 24%);
+  .text {
+    padding: 30px 0;
   }
-
-  .links li {
-    padding: 40px 30px 0 30px;
-    color: hsl(167, 40%, 24%);
+  .text-content {
+    text-align: center;
   }
-
-  .socials img {
-    padding: 60px 10px 50px 10px;
-    color: hsl(167, 40%, 24%);
+  .text-content h1 {
+    width: 100%;
+    font-size: 20px;
+  }
+  .text-content p {
+    font-size: 15px;
+  }
+  .gallery3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery3 img {
+    width: 100%;
+  }
+  .img2d,
+  .img3d {
+    display: none;
+  }
+  .img2m,
+  .img3m {
+    display: flex;
+    width: 100%;
+  }
+  .img-text {
+    width: 80%;
+    position: absolute;
+    right: 27px;
+  }
+  .img-text h2 {
+    font-size: 20px;
+  }
+  .img-text p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+  .t-content {
+    display: block;
+  }
+  .imgm {
+    display: flex;
+  }
+  .img-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .footer {
+    position: relative;
+    top: 1.7px;
   }
 }

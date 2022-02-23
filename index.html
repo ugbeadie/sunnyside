@@ -21,13 +21,17 @@
   <section class="hero">
     <nav>
       <h3><img src="images/logo.svg" alt=""></h3>
-      <img class="burger" src="images/icon-hamburger.svg" alt="">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#"><button>Contact</button></a></li>
-      </ul>
+      <div class="nav-items">
+        <ul>
+          <li><a href="#" onclick="hideUl()">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#"><button>Contact</button></a></li>
+        </ul>
+      </div>
+      <div class="burger">
+        <img src="images/icon-hamburger.svg" alt="">
+      </div>
     </nav>
 
     <h1 class="heading">we are creatives</h1>
@@ -44,16 +48,18 @@
           <p>We are a full-service creative agency specializing in helping brands grow fast.
             Engage your clients through compelling visuals that do most of the marketing for you.</p>
           <button>Learn more</button>
-        </div>
+        </div>  
       </div>
       <div class="img">
-        <img src="images/image-transform.jpg" alt="">
+        <img class="imgd" src="images/image-transform-d.jpg" alt="">
+        <img class="imgm" src="images/image-transform.jpg" alt="">
       </div>
     </div>
 
     <div class="gallery2">
       <div class="img">
-        <img src="images/image-stand-out.jpg" alt="">
+        <img class="imgd" src="images/image-stand-out-d.jpg" alt="">
+        <img class="imgm"src="images/image-stand-out.jpg" alt="">
       </div>
       <div class="text">
         <div class="text-content">
@@ -68,18 +74,27 @@
     </div>
 
     <div class="gallery3">
-      <div class="cherry">
-        <h1>Graphic design</h1>
-        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential
-          clients’
-          attention.
-        </p>
+      <div class="gallery-box left">
+        <img class="img2d" src="images/image-graphic-design-d.jpg" alt="">
+        <img class="img2m" src="images/image-graphic-design.jpg" alt="">
+        <div class="img-text">
+          <h2 class="graphic-design">Graphic Design</h2>
+          <p class="graphic-design">
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential
+            clients’ attention.
+          </p>
+        </div>
       </div>
-      <div class="orange">
-        <h1>Photography</h1>
-        <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+      <div class="gallery-box right">
+        <img class="img3d" src="images/image-photography-d.jpg" alt="">
+        <img class="img3m" src="images/image-photography.jpg" alt="">
+        <div class="img-text">
+          <h2 class="photography">Photography</h2>
+          <p class="photography">
+            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+          </p>
+        </div>
       </div>
-    </div>
     </div>
 
     <section class="testimonial">
@@ -116,16 +131,20 @@
     <section class="img-grid">
     
       <div class="img">
-        <img src="images/image-gallery-milkbottles-d.jpg" alt="">
+        <img class="imgd" src="images/image-gallery-milkbottles-d.jpg" alt="">
+        <img class="imgm" src="images/image-gallery-milkbottles.jpg" alt="">
       </div>
       <div class="img">
-        <img src="images/image-gallery-orange-d.jpg" alt="">
+        <img class="imgd" src="images/image-gallery-orange-d.jpg" alt="">
+        <img class="imgm" src="images/image-gallery-orange.jpg" alt="">
       </div>
       <div class="img">
-        <img src="images/image-gallery-cone-d.jpg" alt="">
+        <img class="imgd" src="images/image-gallery-cone-d.jpg" alt="">
+        <img class="imgm" src="images/image-gallery-cone.jpg" alt="">
       </div>
       <div class="img">
-        <img src="images/image-gallery-sugarcubes-d.jpg" alt="">
+        <img class="imgd" src="images/image-gallery-sugarcubes-d.jpg" alt="">
+        <img class="imgm" src="images/image-gallery-sugarcubes.jpg" alt="">
       </div>
     </section>
 
@@ -150,8 +169,9 @@
     
     </section>
 
+   
+<script src="script.js"></script>
 </body>
-
 </html>
 
 
