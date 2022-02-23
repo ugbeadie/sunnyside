@@ -314,8 +314,8 @@ a {
   }
   .nav-items {
     display: none;
-    position: relative;
-    left: 2px;
+    /* position: relative;
+    left: 2px; */
     justify-content: center;
     align-content: center;
     width: 100%;
